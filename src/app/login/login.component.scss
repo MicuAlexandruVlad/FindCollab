@@ -1,0 +1,134 @@
+
+$bg-color: #8F86F2;
+
+.body {
+
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-color;
+
+    .card {
+        padding: 2rem;
+        box-shadow: 2px 2px 24px 3px rgba(0, 0, 0, 0.205);
+        border-radius: 1rem;
+        background-color: white;
+
+        .card-header {
+            
+            align-items: center;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            span {
+                font-weight: 600;
+                margin-left: 1rem;
+                font-size: 1.5em;
+                letter-spacing: 2px;
+            }
+        }
+
+        .card-form {
+            
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            width: 300px;
+            
+
+            .card-title {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.8em;
+                margin-bottom: 1rem;
+            }
+
+            mat-form-field {
+                margin-top: 1rem;
+            }
+
+            input {
+                font-size: 1.1em;
+                width: 300px;
+            }
+
+            .forgot-pass {
+                font-size: 1em;
+                font-weight: 500;
+                color: $bg-color;
+                text-align: end;
+                margin-top: -.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .forgot-pass:hover {
+                cursor: pointer; 
+            }
+
+            .login-btn {
+                background-color: $bg-color;
+                transition: .25s ease-in-out;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                border-radius: 1rem 1rem 1rem 1rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                margin-top: 2rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-size: 1.2em;
+                font-weight: 500;
+                font-family: 'Lato', sans-serif;
+                color: white;
+
+                &:hover {
+                    box-shadow: 2px 1px 12px 1px #8f86f28e;
+                    outline: none;
+                }
+            }
+
+            .sign-up-holder {
+                justify-content: center;
+                margin-top: 1rem;
+
+                .sign-up {
+                    cursor: pointer;
+                    color: $bg-color;
+                    font-weight: 500;
+                    margin-left: .2rem;
+                }
+            }
+
+
+        }
+    }
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+//querries
+
+@media only screen and (max-width: 650px) {
+    .card {
+        width: 70%;
+    }
+
+    .card-form {
+        width: 60%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

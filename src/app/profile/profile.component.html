@@ -1,0 +1,74 @@
+<div class="body flex-row">
+  <div class="flex-col left-col">
+    <div class="img-flex">
+      <img src="../../assets/smple_profile_photo.jpg" class="profile">
+    </div>
+    <button class="change-img">Change Image</button>
+  </div>
+  <div class="flex-col right-col">
+    <div class="card flex-col">
+      <div class="card-header flex-row">
+        <span class="card-title">Basic info</span>
+        <button (click)="saveBasicInfo()" class="card-save">Save</button>
+      </div>
+      <div class="flex-row input-row">
+        <mat-form-field class="card-field">
+          <mat-label>First name</mat-label>
+          <input [(ngModel)]="firstName" matInput placeholder="First name" spellcheck="false">
+        </mat-form-field>
+        <mat-form-field class="card-field">
+          <mat-label>Last name</mat-label>
+          <input [(ngModel)]="lastName" matInput placeholder="Last name" spellcheck="false">
+        </mat-form-field>
+      </div>
+      <div class="flex-row input-row">
+        <mat-form-field class="card-field">
+          <mat-label>Email</mat-label>
+          <input [(ngModel)]="email" matInput placeholder="Email" type="email" spellcheck="false">
+        </mat-form-field>
+        <mat-form-field class="card-field">
+          <mat-label>Birth Date</mat-label>
+          <input [(ngModel)]="birthDate" matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="card flex-col mt-3">
+      <div class="card-header flex-row">
+        <span class="card-title">About me</span>
+        <button (click)="saveAboutMe()" class="card-save">Save</button>
+      </div>
+      <div class="flex-row input-row">
+        <mat-form-field class="card-field">
+          <mat-label>Introduction</mat-label>
+          <textarea matInput placeholder="Write a short summary about yourself"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="card flex-col mt-3">
+      <div class="card-header flex-row">
+        <span class="card-title">External Links</span>
+        <button (click)="saveExternalLinks()" class="card-save">Save</button>
+      </div>
+      <div class="flex-row input-row">
+        <mat-form-field class="card-field">
+            <mat-label>Facebook URL</mat-label>
+            <input [(ngModel)]="facebookUrl" matInput placeholder="Paste your link here" type="url" spellcheck="false">
+          </mat-form-field>
+      </div>
+      <div class="flex-row input-row">
+        <mat-form-field class="card-field">
+            <mat-label>Twitter URL</mat-label>
+            <input [(ngModel)]="twitterUrl" matInput placeholder="Paste your link here" type="url" spellcheck="false">
+          </mat-form-field>
+      </div>
+      <div class="flex-row input-row">
+        <mat-form-field class="card-field">
+            <mat-label>LinkedIn URL</mat-label>
+            <input [(ngModel)]="LinknedInUrl" matInput placeholder="Paste your link here" type="url" spellcheck="false">
+          </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>

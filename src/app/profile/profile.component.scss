@@ -1,0 +1,126 @@
+
+$main-color: #8F86F2;
+
+.body {
+    margin-left: 10rem;
+    margin-right: 10rem; 
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    justify-content: center;
+
+    .left-col {
+
+        .img-flex {
+            width: fit-content;
+    
+            .profile {
+                width: auto; 
+                height: auto; 
+                max-width: 240px;
+                max-height: 240px;
+                object-fit: contain; 
+                border-radius: 2rem;
+                box-shadow: 2px 2px 12px 1px #8f86f267;
+            }
+        }
+    
+        .change-img {
+            width: fit-content;
+            margin-top: 1.2rem;
+            padding-top: .6rem;
+            padding-bottom: .6rem;
+            padding-left: 1.4rem;
+            padding-right: 1.4rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1em;
+            border-radius: 1rem;
+            border: none;
+            outline: none;
+            background-color: $main-color;
+            color: white;
+            cursor: pointer;
+            transition: .2s ease-out;
+    
+            &:hover {
+                box-shadow: 2px 2px 12px 1px #8f86f288;
+            }
+        }
+    }
+
+    .right-col {
+
+        padding-left: 3rem;
+        width: 80%;
+        height: fit-content;
+        max-width: 1200px;
+
+        .card {
+            border-radius: 1rem;
+            background-color: white;
+            width: 80%;
+            box-shadow: 2px 2px 12px 1px #8f86f215;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .card-header {
+                align-items: center;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                margin-bottom: 2.5rem;
+
+                .card-title {
+                    font-size: 1.4em;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                }
+
+                .card-save {
+                    padding-top: .4rem;
+                    padding-bottom: .4rem;
+                    padding-left: .8rem;
+                    padding-right: .8rem;
+                    background-color: $main-color;
+                    transition: .2s ease-out;
+                    outline: none;
+                    border-radius: 1rem;
+                    border: none;
+                    cursor: pointer;
+                    margin-left: auto;
+                    color: white;
+                    font-size: 1.1em;
+
+                    &:hover {
+                        box-shadow: 2px 2px 12px 1px #8f86f288;
+                    }
+                }
+            }
+
+            .input-row {
+                width: 100%;
+
+                .card-field {
+                    width: 100%;
+                    font-size: 1.1em;
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}

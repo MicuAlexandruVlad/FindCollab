@@ -1,0 +1,133 @@
+$main-color: #8F86F2;
+
+.nav-body {
+    width: 100vw;
+    max-width: 100%;
+    box-shadow: 2px 2px 12px 1px #8f86f215;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    top: 0;
+
+    .logo {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-left: 1rem;
+    }
+
+    .title {
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 1.2em;
+        font-family: 'Lato', sans-serif;
+        margin-left: .8rem;
+    }
+
+    .right-menu {
+        margin-left: auto;
+
+        .txt-action {
+            align-items: center;
+            justify-content: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-size: 1em;
+            transition: .2s ease-in-out;
+
+            span {
+                font-size: 1.1em;
+            }
+
+            &:hover {
+                background-color: $main-color;
+                color: white;
+            }
+        }
+
+        .menu {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: inline-block;
+            position: relative;
+
+            .right-menu-holder {
+                align-items: center;
+                margin-left: 1rem;
+                margin-right: 1rem;
+    
+                .user-name {
+                    font-family: 'Lato', sans-serif;
+                    font-size: 1.1em;
+                    margin-right: .6rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+        
+                .open-menu {
+                    height: 1rem;
+                    width: 1rem;
+                    transition: .2s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+
+            .menu-content {
+                visibility: hidden;
+                display: block;
+                opacity: 0;
+                position: absolute;
+                transition: .2s ease-in-out;
+                box-shadow: 2px 2px 12px 1px #8f86f267;
+                margin-top: 1.05rem;
+                z-index: 2;
+
+                .menu-btn-holder {
+                    font-size: 1.1em;
+                    min-width: 160px;
+                    font-family: 'Lato', sans-serif;
+                    transition: .2s ease-in-out;
+                    background-color: white;
+
+                    span {
+                        display: block;
+                        cursor: pointer;
+                        padding-top: .6rem;
+                        padding-bottom: .6rem;
+                        padding-left: .6rem;
+                        padding-right: .6rem;
+                    }
+
+                    &:hover {
+                        background-color: $main-color;
+                        color: white;
+                    }
+                }
+
+                
+            }
+
+            &:hover .menu-content {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &:hover .open-menu {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}

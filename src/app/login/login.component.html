@@ -1,0 +1,25 @@
+<div class="body flex-col">
+    <div class="card flex-col">
+        <div class="flex-row card-header">
+            <img src="../../assets/logo.png" alt="">
+            <span>FindCollab</span>
+        </div>
+        <div class="card-form flex-col">
+            <span class="card-title">Log in</span>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email address</mat-label>
+                <input matInput placeholder="Email" type="email" spellcheck="false">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" type="email" type="password">
+            </mat-form-field>
+            <p (click)="navPasswordReset()" class="forgot-pass">Forgot password ?</p>
+            <button class="login-btn">Log In</button>
+            <div class="flex-row sign-up-holder">
+                <span>Don't have an account ? </span>
+                <span class="sign-up" (click)="navSignUp()">Sign Up</span>
+            </div>
+        </div>
+    </div>
+</div>

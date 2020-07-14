@@ -1,0 +1,26 @@
+<div class="body">
+    <div class="nav-body flex-row">
+        <img class="logo" src="../../assets/logo.png">
+        <span class="title">FindCollab</span>
+        <div class="right-menu flex-row">
+            <div (click)="navSearchCollab()" class="txt-action flex-col">
+                <span>Search Collab</span>
+            </div>
+            <div (click)="navPostCollab()" class="txt-action">
+                <span>Post Collab</span>
+            </div>
+            <div class="menu">
+                <div class="flex-row right-menu-holder"> 
+                    <span class="user-name">Andrew Garfield</span>
+                    <img src="../../assets/down_arrow.png" class="open-menu">
+                </div>
+                <div class="menu-content">
+                    <div (click)="navProfile()" class="menu-btn-holder">
+                        <span>Profile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
