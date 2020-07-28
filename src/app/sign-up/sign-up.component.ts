@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-class User {
-  firstName: string
-  lastName: string
-  email: string
-  password: string
-}
+import { ApiClient } from '../../core/ApiClient'
+import Axios, { AxiosResponse } from 'axios'
+import { from } from 'rxjs';
+import { User } from 'src/shared/models/User';
+import * as HttpStatus from 'http-status-codes'
+import { BasicDataService } from 'src/core/services/basic-data.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -22,7 +21,7 @@ export class SignUpComponent implements OnInit {
   email = ''
   password = ''
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private basicDataService: BasicDataService) { }
 
   ngOnInit(): void {
   }
@@ -43,7 +42,33 @@ export class SignUpComponent implements OnInit {
       this.user.email = this.email
       this.user.password = this.password
 
-      console.log(this.user)
+      let apiClient = new ApiClient()
+      let verificationCode = this.generateVerificationCode()
+      console.log(verificationCode)
+      this.basicDataService.emailVerificationCode = verificationCode
+      this.basicDataService.email = this.email
+      let obs = apiClient.registerUser(this.user, verificationCode)
+      obs.subscribe((response) => {
+        let data = (response as AxiosResponse).data
+        if (data.status == HttpStatus.OK) {
+          alert('Account created')
+          this.router.navigate(['/email-verification'])
+        } else if (data.status == HttpStatus.NOT_IMPLEMENTED) {
+          alert('Email address already used')
+        }
+        obs.unsubscribe()
+      })
     }
+  }
+
+  private generateVerificationCode(): string {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    
+    for ( var i = 0; i < 5; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    return result;
   }
 }

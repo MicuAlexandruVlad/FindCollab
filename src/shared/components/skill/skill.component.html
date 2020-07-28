@@ -1,0 +1,10 @@
+<div class="body">
+  <span class="skill-name">{{ skill.name }}</span>
+  <div class="grades flex-row">
+    <div [ngClass]="{ 'graded': skill.grade >= 1, 'not-graded': skill.grade < 1 }" id="grade-1" class="grade"></div>
+    <div [ngClass]="{ 'graded': skill.grade >= 2, 'not-graded': skill.grade < 2 }" id="grade-2" class="grade"></div>
+    <div [ngClass]="{ 'graded': skill.grade >= 3, 'not-graded': skill.grade < 3 }" id="grade-3" class="grade"></div>
+    <div [ngClass]="{ 'graded': skill.grade >= 4, 'not-graded': skill.grade < 4 }" id="grade-4" class="grade"></div>
+    <div [ngClass]="{ 'graded': skill.grade >= 5, 'not-graded': skill.grade < 5 }" id="grade-5" class="grade"></div>
+  </div>
+</div>

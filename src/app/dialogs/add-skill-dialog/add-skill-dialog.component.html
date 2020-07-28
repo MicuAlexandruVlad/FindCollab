@@ -1,0 +1,20 @@
+<div class="body flex-col">
+  <p class="title">Add New Skills</p>
+  <div *ngFor="let skill of skills; let i = index" class="input-row flex-row">
+    <mat-form-field>
+      <mat-label>Skill</mat-label>
+      <input [(ngModel)]="skill.name" matInput placeholder="Ex. Angular" spellcheck="false">
+    </mat-form-field>
+    <div class="grades flex-row">
+      <div [ngClass]="{ 'graded': skill.grade >= 1, 'not-graded': skill.grade < 1 }" (click)="onGrade1(i)" id="grade-1" class="grade"></div>
+      <div [ngClass]="{ 'graded': skill.grade >= 2, 'not-graded': skill.grade < 2 }" (click)="onGrade2(i)" id="grade-2" class="grade"></div>
+      <div [ngClass]="{ 'graded': skill.grade >= 3, 'not-graded': skill.grade < 3 }" (click)="onGrade3(i)" id="grade-3" class="grade"></div>
+      <div [ngClass]="{ 'graded': skill.grade >= 4, 'not-graded': skill.grade < 4 }" (click)="onGrade4(i)" id="grade-4" class="grade"></div>
+      <div [ngClass]="{ 'graded': skill.grade >= 5, 'not-graded': skill.grade < 5 }" (click)="onGrade5(i)" id="grade-5" class="grade"></div>
+    </div>
+  </div>
+  <div (click)="onNewSkill()" class="add-skill">
+    <img src="../../../assets/plus.png">
+  </div>
+  <button (click)="onDone()" class="done">Done</button>
+</div>

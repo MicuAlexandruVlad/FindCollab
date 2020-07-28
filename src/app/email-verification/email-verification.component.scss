@@ -1,0 +1,104 @@
+
+$main-color: #8F86F2;
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $main-color;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        padding: 2rem;
+        box-shadow: 2px 2px 24px 3px rgba(0, 0, 0, 0.205);
+        border-radius: 1rem;
+        background-color: white;
+
+        .header {
+            align-items: center;
+
+            .logo {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            span {
+                margin-left: 1rem;
+                font-size: 1.3em;
+                font-family: 'Lato', sans-serif;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        }
+
+        .card-body {
+            max-width: 400px;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+
+            span {
+                font-size: 1.1em;
+                font-family: 'Lato', sans-serif;
+            }
+
+            .input-holder {
+                margin-top: 2rem;
+                justify-content: center;
+                
+                .mat-form-field {
+                    font-size: 1.7em;
+                    width: 34px;
+                    margin-right: .5rem;
+                    margin-left: .5rem;
+                    font-weight: 500;
+                }
+
+                input {
+                    max-lines: 1;
+                    text-align: center;
+                    color: $main-color;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        .btn-holder {
+            justify-content: center;
+
+            .submit {
+                border-radius: 2rem;
+                background-color: $main-color;
+                font-size: 1.2em;
+                font-family: 'Roboto', sans-serif;
+                width: 100px;
+                color: white;
+                cursor: pointer;
+                border: none;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: .6rem;
+                padding-bottom: .6rem;
+                box-shadow: 0px 0px 8px 2px #8f86f246;
+                transition: .3s ease-out;
+                outline: none;
+
+                &:hover {
+                    box-shadow: 0px 0px 8px 6px #8f86f252;
+                }
+            }
+        }
+    }
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+

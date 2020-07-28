@@ -8,14 +8,14 @@
             <span class="card-title">Log in</span>
             <mat-form-field class="example-full-width">
                 <mat-label>Email address</mat-label>
-                <input matInput placeholder="Email" type="email" spellcheck="false">
+                <input [(ngModel)]="email" matInput placeholder="Email" type="email" spellcheck="false">
             </mat-form-field>
             <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="Password" type="email" type="password">
+                <input [(ngModel)]="password" matInput placeholder="Password" type="email" type="password">
             </mat-form-field>
             <p (click)="navPasswordReset()" class="forgot-pass">Forgot password ?</p>
-            <button class="login-btn">Log In</button>
+            <button (click)="onLogIn()" class="login-btn">Log In</button>
             <div class="flex-row sign-up-holder">
                 <span>Don't have an account ? </span>
                 <span class="sign-up" (click)="navSignUp()">Sign Up</span>

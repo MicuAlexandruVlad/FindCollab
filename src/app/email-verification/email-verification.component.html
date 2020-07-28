@@ -1,0 +1,31 @@
+<div class="body flex-col">
+    <div class="card flex-col">
+        <div class="header flex-row">
+            <img src="../../assets/logo.png" class="logo">
+            <span>FindCollab</span>
+        </div>
+        <div class="card-body">
+            <span>An email has been sent to <b>{{userEmail}}</b> with a code to verify your account. Please input that in the field below.</span>
+            <div class="input-holder flex-row">
+                <mat-form-field>
+                    <input [(ngModel)]="sec1Val" id="security-1" maxlength="1" matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <input [(ngModel)]="sec2Val" id="security-2" maxlength="1" matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <input [(ngModel)]="sec3Val" id="security-3" maxlength="1" matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <input [(ngModel)]="sec4Val" id="security-4" maxlength="1" matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <input [(ngModel)]="sec5Val" id="security-5" maxlength="1" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="btn-holder flex-row">
+            <button (click)="onSubmit()" class="submit">Submit</button>
+        </div>
+    </div>
+</div>

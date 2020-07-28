@@ -1,0 +1,41 @@
+$accent-color: #E65F5C;
+
+.body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+
+    .skill-name {
+        font-size: 1.2em;
+    }
+    
+    .grades {
+        width: fit-content;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    
+        .grade {
+            margin-left: .8rem;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            transition: .2s ease-in;
+        }
+    
+        .graded { 
+            background-color: $accent-color;
+        }
+    
+        .not-graded {
+            background-color: rgb(158, 158, 158);
+        }
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}

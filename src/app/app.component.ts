@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'FindCollab';
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
-    this.router.navigate(['/main']);
+    this.router.navigate(['/login']);
   }
 }

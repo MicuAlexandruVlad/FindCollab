@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchCollabComponent } from './search-collab/search-collab.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
+import { EmailVerificationComponent } from './email-verification/email-verification.component';
 
 
 const routes: Routes = [{
@@ -19,6 +20,9 @@ const routes: Routes = [{
 }, {
   path: 'reset-password',
   component: PasswordResetComponent
+}, {
+  path: 'email-verification',
+  component: EmailVerificationComponent
 }, {
   path: 'sign-up',
   component: SignUpComponent

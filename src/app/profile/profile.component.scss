@@ -1,5 +1,7 @@
 
 $main-color: #8F86F2;
+$accent-color: #E65F5C;
+$edit: #F17300;
 
 .body {
     margin-left: 10rem;
@@ -50,14 +52,14 @@ $main-color: #8F86F2;
     .right-col {
 
         padding-left: 3rem;
-        width: 80%;
+        width: 70%;
         height: fit-content;
         max-width: 1200px;
 
         .card {
             border-radius: 1rem;
             background-color: white;
-            width: 80%;
+            width: 100%;
             box-shadow: 2px 2px 12px 1px #8f86f215;
             padding-top: 2rem;
             padding-bottom: 2rem;
@@ -76,23 +78,44 @@ $main-color: #8F86F2;
                     font-weight: 500;
                 }
 
-                .card-save {
-                    padding-top: .4rem;
-                    padding-bottom: .4rem;
-                    padding-left: .8rem;
-                    padding-right: .8rem;
-                    background-color: $main-color;
-                    transition: .2s ease-out;
-                    outline: none;
-                    border-radius: 1rem;
-                    border: none;
-                    cursor: pointer;
+                .card-header-btn-holder {
+                    width: fit-content;
                     margin-left: auto;
-                    color: white;
-                    font-size: 1.1em;
 
-                    &:hover {
-                        box-shadow: 2px 2px 12px 1px #8f86f288;
+                    .card-header-btn {
+                        padding-top: .4rem;
+                        padding-bottom: .4rem;
+                        padding-left: .8rem;
+                        padding-right: .8rem;
+                        background-color: $main-color;
+                        transition: .2s ease-out;
+                        outline: none;
+                        border-radius: 1rem;
+                        border: none;
+                        cursor: pointer;
+                        color: white;
+                        font-size: 1.1em;
+    
+                        &:hover {
+                            box-shadow: 2px 2px 12px 1px #8f86f288;
+                        }
+                    }
+    
+                    .btn-add {
+                        margin-right: 1rem;
+                        background-color: $accent-color;
+
+                        &:hover {
+                            box-shadow: 2px 2px 12px 1px #E65F5C88;
+                        }
+                    }
+
+                    .btn-edit {
+                        background-color: $edit;
+
+                        &:hover {
+                            box-shadow: 2px 2px 12px 1px #F1730088;
+                        }
                     }
                 }
             }
@@ -106,6 +129,57 @@ $main-color: #8F86F2;
                     margin-left: 1rem;
                     margin-right: 1rem;
                 }
+            }
+
+            // .skill-name {
+            //     font-size: 1.2em;
+            // }
+
+            // .grades {
+            //     width: fit-content;
+            //     margin-left: auto;
+            //     margin-top: auto;
+            //     margin-bottom: auto;
+    
+            //     .grade {
+            //         margin-left: .8rem;
+            //         border-radius: 50%;
+            //         width: 24px;
+            //         height: 24px;
+            //         transition: .2s ease-in;
+            //     }
+    
+            //     .graded { 
+            //         background-color: $accent-color;
+            //     }
+    
+            //     .not-graded {
+            //         background-color: rgb(158, 158, 158);
+            //     }
+            // }
+        }
+
+        .save {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3rem;
+            width: fit-content;
+            padding-right: 3rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 3rem;
+            background-color: $main-color;
+            font-size: 1.2em;
+            font-family: 'Lato', sans-serif;
+            outline: none;
+            transition: .2s ease-out;
+            color: white;
+            border-radius: 2rem;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 2px 2px 12px 1px #8f86f288;
             }
         }
     }
@@ -123,4 +197,39 @@ $main-color: #8F86F2;
 
 .mt-3 {
     margin-top: 3rem;
+}
+
+.ml-1 {
+    margin-left: 1rem;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.no-info {
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.603);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 1228px) {
+
+    #location {
+        flex-direction: column;
+
+        mat-form-field {
+            margin-right: 2rem !important;
+        }
+
+        //???????? margin does not work for some reason
+    }
+
 }
